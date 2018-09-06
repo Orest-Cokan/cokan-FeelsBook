@@ -10,9 +10,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Locale;
 
 public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHolder>{
     private ArrayList<Emotion> emotionArrayList;
@@ -38,9 +41,11 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        holder.emotion.setText(emotionArrayList.get(position).getEmotion());
+        String emotion = emotionArrayList.get(position).getEmotion();
+        holder.emotion.setImageDrawable(activity.getDrawable(activity.getResources().getIdentifier
+                (emotion.toLowerCase(), "drawable", activity.getPackageName())));
         holder.comment.setText(emotionArrayList.get(position).getComments());
-        holder.date.setText(emotionArrayList.get(position).getFormattedDate());
+        holder.date.setText(emotionArrayList.get(position).getDate());
     }
 
 
@@ -54,7 +59,7 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
 
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private EmotionAdapter adapter;
-        public TextView emotion;
+        public ImageView emotion;
         public TextView comment;
         public TextView date;
 

@@ -1,150 +1,194 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".RecyclerFragment">
 
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@drawable/pepe_border">
 
         <TextView
             android:id="@+id/count_surprise"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="8dp"
-            android:layout_marginEnd="4dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="16dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/surprise_pepe"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/surprise_pepe"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/surprise"
+            app:layout_constraintEnd_toStartOf="@+id/joy"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/surprise"
+            app:layout_constraintTop_toTopOf="@+id/surprise" />
 
         <ImageView
-            android:id="@+id/surprise_pepe"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
+            android:id="@+id/surprise"
+            android:layout_width="50dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/count_surprise"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/count_love"
-            app:srcCompat="@drawable/surprised_pepe"
-            tools:layout_editor_absoluteY="0dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/surprise" />
 
         <TextView
             android:id="@+id/count_love"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/love_pepe"
-            app:layout_constraintStart_toEndOf="@+id/love_pepe"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/love"
+            app:layout_constraintEnd_toStartOf="@+id/surprise"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/love"
+            app:layout_constraintTop_toTopOf="@+id/love" />
 
         <ImageView
-            android:id="@+id/love_pepe"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
+            android:id="@+id/love"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/count_love"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/count_sad"
-            app:srcCompat="@drawable/love_pepe"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <TextView
-            android:id="@+id/count_sad"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
-            android:text="0"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toTopOf="@+id/counter_list"
-            app:layout_constraintStart_toEndOf="@+id/sad_pepe"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/love" />
 
         <ImageView
-            android:id="@+id/sad_pepe"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="8dp"
+            android:id="@+id/sad"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/count_sad"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/count_fear"
-            app:srcCompat="@drawable/sad_pepe"
-            tools:layout_editor_absoluteY="0dp" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/sad" />
 
         <ImageView
-            android:id="@+id/fear_pepe"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginStart="8dp"
-            app:layout_constraintStart_toEndOf="@+id/count_angry"
-            app:srcCompat="@drawable/fear_pepe"
-            tools:layout_editor_absoluteY="0dp" />
-
-        <ImageView
-            android:id="@+id/angry_pepe"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginLeft="4dp"
+            android:id="@+id/joy"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toStartOf="@+id/count_joy"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/count_surprise"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/joy" />
+
+        <ImageView
+            android:id="@+id/fear"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/count_fear"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/count_angry"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/fear" />
+
+        <ImageView
+            android:id="@+id/angry"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="12dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/count_angry"
+            app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/angry_pepe" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/angry" />
 
         <TextView
             android:id="@+id/count_angry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/angry_pepe"
-            app:layout_constraintStart_toEndOf="@+id/angry_pepe"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/angry"
+            app:layout_constraintEnd_toStartOf="@+id/fear"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/angry"
+            app:layout_constraintTop_toTopOf="@+id/angry" />
+
+        <TextView
+            android:id="@+id/count_joy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/joy"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/joy"
+            app:layout_constraintTop_toTopOf="@+id/joy" />
 
         <TextView
             android:id="@+id/count_fear"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
             android:layout_marginStart="4dp"
-            android:layout_marginTop="16dp"
             android:text="0"
             android:textAppearance="@style/TextAppearance.AppCompat.Body1"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="@+id/fear_pepe"
-            app:layout_constraintStart_toEndOf="@+id/fear_pepe"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/fear"
+            app:layout_constraintEnd_toStartOf="@+id/sad"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/fear"
+            app:layout_constraintTop_toTopOf="@+id/fear" />
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/counter_list"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="8dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/angry_pepe" />
+        <TextView
+            android:id="@+id/count_sad"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="0"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/sad"
+            app:layout_constraintEnd_toStartOf="@+id/love"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/sad"
+            app:layout_constraintTop_toTopOf="@+id/sad" />
 
     </android.support.constraint.ConstraintLayout>
 
-</RelativeLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/counter_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/angry" />
+
+</LinearLayout>

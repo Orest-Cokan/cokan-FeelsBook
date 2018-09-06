@@ -9,13 +9,13 @@ public class Emotion implements Serializable{
 
     private String emotion;
     private String comments;
-    private Date date;
+    private String date;
 
 
     public Emotion(String emotion, String comments, Date date){
         this.emotion = emotion;
         this.comments = comments;
-        this.date = date;
+        this.date = getFormattedDate(date);
     }
 
 
@@ -35,17 +35,18 @@ public class Emotion implements Serializable{
         this.comments = comments;
     }
 
-    public Date getDate() {
-        return date;
-    }
 
-    public String getFormattedDate () {
-        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-dd", Locale.CANADA);
+    private String getFormattedDate (Date date) {
+        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-DD'T'H:mm:ss", Locale.CANADA);
         return format.format(date);
     }
 
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getDate() {
+        return date;
     }
 
 }

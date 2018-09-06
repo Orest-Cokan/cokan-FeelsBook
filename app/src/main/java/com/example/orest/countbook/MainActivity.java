@@ -6,7 +6,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
@@ -33,7 +35,9 @@ public class MainActivity extends AppCompatActivity {
         if(emotion != null) {
             emotionArray.add(emotion);
         }
+        saveEmotions();
     }
+
 
 
     public void onEdit(Emotion emotion, int index){
@@ -42,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
         else
             emotionArray.set(index, emotion);
 
+        saveEmotions();
         onBackPressed();
     }
 
@@ -54,6 +59,19 @@ public class MainActivity extends AppCompatActivity {
             objStream.close();
         }
         catch(java.io.IOException | java.lang.ClassNotFoundException e) {
+            emotionArray = new ArrayList<>();
+        }
+    }
+
+    private void saveEmotions() {
+        try {
+            FileOutputStream stream = openFileOutput(COUNTER_FILE_NAME,0);
+            ObjectOutputStream objStream = new ObjectOutputStream(stream);
+            objStream.writeObject(emotionArray);
+            stream.close();
+            objStream.close();
+        }
+        catch(java.io.IOException e) {
             emotionArray = new ArrayList<>();
         }
     }
