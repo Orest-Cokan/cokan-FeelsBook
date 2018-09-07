@@ -31,7 +31,7 @@ public class AddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_add_pepe, container, false);
-        getActivity().setTitle("Add Emotion");
+        getActivity().setTitle("FeelsBook");
 
         // ui definitions
         final ImageView angry = (ImageView) rootView.findViewById(R.id.angry);
