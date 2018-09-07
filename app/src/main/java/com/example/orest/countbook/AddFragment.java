@@ -96,14 +96,14 @@ public class AddFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                if (comments.getText().toString().length() > 100) {
+                if (comments.getText().toString().trim().length() > 100) {
                     Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
                     comments.getText().clear();
                 }
                 else {
                     Emotion emotion = new Emotion(
                             selected,
-                            comments.getText().toString(),
+                            comments.getText().toString().trim(),
                             new Date()
                     );
                     ((MainActivity) getActivity()).onAdd(emotion);
