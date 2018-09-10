@@ -41,7 +41,6 @@ public class RecyclerFragment extends Fragment {
         TextView countJoy = (TextView) rootView.findViewById(R.id.count_joy);
         RecyclerView counterList = (RecyclerView) rootView.findViewById(R.id.counter_list);
         counterList.setHasFixedSize(false);
-        Log.d("Test", emotions.size()+"");
         adapter = new EmotionAdapter(getActivity(), emotions);
         counterList.setAdapter(adapter);
         LinearLayoutManager manager = new LinearLayoutManager(getContext());
