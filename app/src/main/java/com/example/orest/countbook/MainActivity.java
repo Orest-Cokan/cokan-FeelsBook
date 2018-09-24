@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void onAdd(Emotion emotion){
         if(emotion != null) {
-            emotionArray.add(emotion);
+            emotionArray.add(0,emotion);
         }
         saveEmotions();
     }
@@ -41,11 +41,10 @@ public class MainActivity extends AppCompatActivity {
 
 
     public void onEdit(Emotion emotion, int index){
-        if(emotion == null)
-            emotionArray.remove(index);
-        else
-            emotionArray.set(index, emotion);
-
+        emotionArray.remove(index);
+        if(emotion!= null){
+            emotionArray.add(0, emotion);
+        }
         saveEmotions();
         onBackPressed();
     }
