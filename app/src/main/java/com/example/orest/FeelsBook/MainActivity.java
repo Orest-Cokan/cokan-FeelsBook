@@ -1,9 +1,11 @@
-package com.example.orest.countbook;
+package com.example.orest.FeelsBook;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+
+import com.example.orest.FeelsBook.R;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;

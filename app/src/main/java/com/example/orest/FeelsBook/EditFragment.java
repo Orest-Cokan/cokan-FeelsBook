@@ -1,4 +1,4 @@
-package com.example.orest.countbook;
+package com.example.orest.FeelsBook;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -8,12 +8,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import org.w3c.dom.Text;
-
-import java.util.Date;
+import com.example.orest.FeelsBook.R;
 
 public class EditFragment extends Fragment {
 
