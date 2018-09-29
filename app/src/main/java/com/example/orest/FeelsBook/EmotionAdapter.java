@@ -12,8 +12,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+<<<<<<< HEAD:app/src/main/java/com/example/orest/FeelsBook/EmotionAdapter.java
+=======
 import com.example.orest.FeelsBook.R;
 
+>>>>>>> 553d6b8bedc769b68a138796e2a30a2a2007ae30:app/src/main/java/com/example/orest/FeelsBook/EmotionAdapter.java
 import java.util.ArrayList;
 
 public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHolder>{
@@ -29,7 +32,6 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.d("Test", "Counteradapater");
         LayoutInflater inflater = (LayoutInflater) activity
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View counterView = inflater.inflate(R.layout.entry_pepe, parent, false);

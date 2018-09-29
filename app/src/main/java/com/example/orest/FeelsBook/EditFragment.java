@@ -10,8 +10,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+<<<<<<< HEAD:app/src/main/java/com/example/orest/FeelsBook/EditFragment.java
+=======
 import com.example.orest.FeelsBook.R;
 
+>>>>>>> 553d6b8bedc769b68a138796e2a30a2a2007ae30:app/src/main/java/com/example/orest/FeelsBook/EditFragment.java
 public class EditFragment extends Fragment {
 
     public static EditFragment newInstance(Emotion emotion, int index){
