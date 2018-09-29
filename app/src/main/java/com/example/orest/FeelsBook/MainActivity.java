@@ -33,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    // add emotion to stack
     public void onAdd(Emotion emotion){
         if(emotion != null) {
             emotionArray.add(0,emotion);
