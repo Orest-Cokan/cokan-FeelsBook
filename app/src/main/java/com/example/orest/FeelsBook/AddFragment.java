@@ -1,4 +1,4 @@
-package com.example.orest.countbook;
+package com.example.orest.FeelsBook;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -10,7 +10,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -31,7 +30,7 @@ public class AddFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         ViewGroup rootView = (ViewGroup) inflater.inflate(R.layout.fragment_add_pepe, container, false);
-        getActivity().setTitle("FeelsBook");
+        getActivity().setTitle("cokan - FeelsBook");
 
         // ui definitions
         final ImageView angry = (ImageView) rootView.findViewById(R.id.angry);

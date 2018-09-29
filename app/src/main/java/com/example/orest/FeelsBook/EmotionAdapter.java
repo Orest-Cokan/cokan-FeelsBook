@@ -1,4 +1,4 @@
-package com.example.orest.countbook;
+package com.example.orest.FeelsBook;
 
 import android.content.Context;
 import android.support.v4.app.FragmentActivity;
@@ -9,13 +9,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHolder>{
     private ArrayList<Emotion> emotionArrayList;
@@ -30,7 +27,6 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        Log.d("Test", "Counteradapater");
         LayoutInflater inflater = (LayoutInflater) activity
                 .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View counterView = inflater.inflate(R.layout.entry_pepe, parent, false);

@@ -1,4 +1,4 @@
-package com.example.orest.countbook;
+package com.example.orest.FeelsBook;
 
 import org.junit.Test;
 
