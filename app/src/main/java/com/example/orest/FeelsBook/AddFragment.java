@@ -55,29 +55,113 @@ public class AddFragment extends Fragment {
                 if (v == angry) {
                     selected = "angry";
                     angry.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
 
                 else if (v == fear){
                     selected = "fear";
                     fear.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
 
                 else if (v == sad) {
                     selected = "sad";
                     sad.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
 
                 else if (v == surprise) {
                     selected = "surprise";
                     surprise.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
                 else if (v == joy){
                     selected = "joy";
                     joy.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
                 else {
                     selected = "love";
                     love.setColorFilter(Color.parseColor("#55000000"));
+                    if (comments.getText().toString().trim().length() > 100) {
+                        Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
+                    else {
+                        Emotion emotion = new Emotion(
+                                selected,
+                                comments.getText().toString().trim(),
+                                new Date()
+                        );
+                        ((MainActivity) getActivity()).onAdd(emotion);
+                        Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
+                        comments.getText().clear();
+                    }
                 }
             }
 
@@ -90,27 +174,6 @@ public class AddFragment extends Fragment {
         love.setOnClickListener(listener);
         joy.setOnClickListener(listener);
 
-        // set onclicklistener save button
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                if (comments.getText().toString().trim().length() > 100) {
-                    Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
-                    comments.getText().clear();
-                }
-                else {
-                    Emotion emotion = new Emotion(
-                            selected,
-                            comments.getText().toString().trim(),
-                            new Date()
-                    );
-                    ((MainActivity) getActivity()).onAdd(emotion);
-                    Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
-                    comments.getText().clear();
-                }
-            }
-        });
 
 
         history.setOnClickListener(new View.OnClickListener() {
