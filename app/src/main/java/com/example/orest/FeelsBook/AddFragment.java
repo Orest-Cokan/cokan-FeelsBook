@@ -115,7 +115,7 @@ public class AddFragment extends Fragment {
 
         return rootView;
     }
-
+    //faster
     public void checkTrigger(EditText comments) {
         if (comments.getText().toString().trim().length() > 100) {
             Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
