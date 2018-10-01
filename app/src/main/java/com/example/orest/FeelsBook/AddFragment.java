@@ -22,8 +22,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AddFragment extends Fragment {
-    private final static String COUNTERFILENAME = "counters.sav";
-    private ArrayList<Emotion> counterArray;
     private String selected;
 
     public static AddFragment newInstance() {
@@ -45,7 +43,6 @@ public class AddFragment extends Fragment {
         final ImageView love = (ImageView) rootView.findViewById(R.id.love);
         final ImageView joy = (ImageView) rootView.findViewById(R.id.joy);
         final EditText comments = (EditText) rootView.findViewById(R.id.comment);
-        Button save = (Button) rootView.findViewById(R.id.save_button);
         Button history = (Button) rootView.findViewById(R.id.history_button);
 
         View.OnClickListener listener = new View.OnClickListener() {

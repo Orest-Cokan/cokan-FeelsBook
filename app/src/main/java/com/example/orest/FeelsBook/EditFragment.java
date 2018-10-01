@@ -13,7 +13,6 @@ import android.widget.Toast;
 import com.example.orest.FeelsBook.R;
 
 public class EditFragment extends Fragment {
-
     public static EditFragment newInstance(Emotion emotion, int index){
         EditFragment fragment = new EditFragment();
         Bundle bundle = new Bundle();
@@ -24,7 +23,7 @@ public class EditFragment extends Fragment {
     }
 
 
-
+    //override
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -54,7 +53,7 @@ public class EditFragment extends Fragment {
             public void onClick(View v) {
                 String comm =comments.getText().toString().trim();
                 if (comments.getText().toString().length() > 100){
-                    Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "You messed up kiddo, change comments", Toast.LENGTH_LONG).show();
                     comments.getText().clear();
                 }
                 else {
