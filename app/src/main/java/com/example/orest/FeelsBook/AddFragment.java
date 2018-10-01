@@ -1,6 +1,7 @@
 package com.example.orest.FeelsBook;
 
 import android.graphics.Color;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -17,6 +18,8 @@ import org.w3c.dom.Comment;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class AddFragment extends Fragment {
     private final static String COUNTERFILENAME = "counters.sav";
@@ -87,6 +90,7 @@ public class AddFragment extends Fragment {
                     love.setColorFilter(Color.parseColor("#55000000"));
                     checkTrigger(comments);
                 }
+                delayFilter((ImageView) v);
             }
 
         };
@@ -118,7 +122,7 @@ public class AddFragment extends Fragment {
     //faster
     public void checkTrigger(EditText comments) {
         if (comments.getText().toString().trim().length() > 100) {
-            Toast.makeText(getActivity(), "You fucked up kiddo, change comments", Toast.LENGTH_LONG).show();
+            Toast.makeText(getActivity(), "You messed up kiddo, change comments", Toast.LENGTH_LONG).show();
             comments.getText().clear();
         }
         else {
@@ -132,6 +136,15 @@ public class AddFragment extends Fragment {
             comments.getText().clear();
         }
 
+    }
+    public void delayFilter(final ImageView v) {
+        Timer timer = new Timer();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                v.clearColorFilter();
+            }
+        }, 1000);
     }
 
 }
