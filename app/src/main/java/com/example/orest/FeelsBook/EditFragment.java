@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.orest.FeelsBook.R;
 
 public class EditFragment extends Fragment {
+
+    // create a newInstance of EditFragment
     public static EditFragment newInstance(Emotion emotion, int index){
         EditFragment fragment = new EditFragment();
         Bundle bundle = new Bundle();
@@ -23,7 +25,7 @@ public class EditFragment extends Fragment {
     }
 
 
-    //override
+    // display the view to the screen
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class EditFragment extends Fragment {
 
 
         Bundle bundle = getArguments();
+        // get the position and emotion from the list
         final int index = bundle.getInt("INDEX");
         final Emotion emotionStr = (Emotion) bundle.getSerializable("COUNTER");
 
@@ -48,6 +51,7 @@ public class EditFragment extends Fragment {
         date.setText(emotionStr.getDate());
         comments.setText(emotionStr.getComments());
 
+        // create and set onclicker listener for edit save
         save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -64,7 +68,7 @@ public class EditFragment extends Fragment {
             }
         });
 
-
+        // create and set onclicker listener for delete
         delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -22,6 +22,7 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 public class AddFragment extends Fragment {
+    // attributes
     private String selected;
 
     public static AddFragment newInstance() {
@@ -45,6 +46,7 @@ public class AddFragment extends Fragment {
         final EditText comments = (EditText) rootView.findViewById(R.id.comment);
         Button history = (Button) rootView.findViewById(R.id.history_button);
 
+        // set onclicker listeners for emotions
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +94,7 @@ public class AddFragment extends Fragment {
 
         };
 
+        // attach onclick listener to emotions
         angry.setOnClickListener(listener);
         fear.setOnClickListener(listener);
         sad.setOnClickListener(listener);
@@ -100,7 +103,7 @@ public class AddFragment extends Fragment {
         joy.setOnClickListener(listener);
 
 
-
+        // set onclick listener for history button
         history.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -116,7 +119,8 @@ public class AddFragment extends Fragment {
 
         return rootView;
     }
-    //faster
+
+    // check if conditions are met, if so, create the emotion
     public void checkTrigger(EditText comments) {
         if (comments.getText().toString().trim().length() > 100) {
             Toast.makeText(getActivity(), "You messed up kiddo, change comments", Toast.LENGTH_LONG).show();
@@ -132,8 +136,9 @@ public class AddFragment extends Fragment {
             Toast.makeText(getActivity(), "You added an emotion", Toast.LENGTH_LONG).show();
             comments.getText().clear();
         }
-
     }
+
+    // add a slick 1 second filter to the emotion clicked
     public void delayFilter(final ImageView v) {
         Timer timer = new Timer();
         timer.schedule(new TimerTask() {
