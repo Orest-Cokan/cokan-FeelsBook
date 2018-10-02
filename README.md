@@ -24,4 +24,5 @@ Both are located within the docs directory
 2. In class labs (Lonely Twitter) were used to save and load data from a file, retrieved 2018/09/10 - 2018/10/02
 3. Android Developer, Fragments, https://developer.android.com/guide/components/fragments, retrieved 2018/06/01 - 2018/10/02
 4. Android Developer, RecyclerView, https://developer.android.com/guide/topics/ui/layout/recyclerview, retrieved 2018/06/01 - 2018/10/02
+5. Phil Jay, MPAndroidChart, https://github.com/PhilJay/MPAndroidChart, retrieved 2018/10/02
 
