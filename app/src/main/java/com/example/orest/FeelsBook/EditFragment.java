@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.orest.FeelsBook.R;
 
+
 public class EditFragment extends Fragment {
     public static EditFragment newInstance(Emotion emotion, int index){
         EditFragment fragment = new EditFragment();

@@ -44,6 +44,7 @@ public class AddFragment extends Fragment {
         final ImageView joy = (ImageView) rootView.findViewById(R.id.joy);
         final EditText comments = (EditText) rootView.findViewById(R.id.comment);
         Button history = (Button) rootView.findViewById(R.id.history_button);
+        Button statistics = (Button) rootView.findViewById(R.id.stats_button);
 
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
@@ -113,6 +114,17 @@ public class AddFragment extends Fragment {
             }
         });
 
+        statistics.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FragmentManager manager = getFragmentManager();
+                FragmentTransaction transaction =  manager.beginTransaction();
+                transaction.addToBackStack(null);
+                StatsFragment statsFragment = StatsFragment.newInstance();
+                transaction.replace(R.id.content, statsFragment);
+                transaction.commit();
+            }
+        });
 
         return rootView;
     }

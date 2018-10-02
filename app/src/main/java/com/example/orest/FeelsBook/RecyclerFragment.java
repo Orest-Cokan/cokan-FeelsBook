@@ -52,7 +52,7 @@ public class RecyclerFragment extends Fragment {
         );
 
         counterList.addItemDecoration(decoration);
-        counterList.setItemAnimator(new DefaultItemAnimator());
+               counterList.setItemAnimator(new DefaultItemAnimator());
 
         // set UI values
         int[] counts = new int[6];

@@ -74,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
             objStream.close();
         }
         catch(java.io.IOException e) {
-            emotionArray = new ArrayList<>();
+            //do nothing
         }
     }
 }
