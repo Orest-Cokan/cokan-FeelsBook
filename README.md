@@ -2,7 +2,9 @@
 Orest Cokan
 cokan - Feelsbook CMPUT 301 Assignment 1
 
-The assignment involves creating an android application in java used for recording emotions. Each emotion has a data and may have a comment associated with it. A history page includes each recorded emotion and will allow the user to edit the date and or comment about an emotion.
+The assignment involves creating an android application in java used for recording emotions. Each emotion has a date and may have a comment associated with it. A history page includes each recorded emotion and will allow the user to edit the date and or comment about an emotion.
+
+The application includes the following:
 
 - Quickly record an emotion with only 1 click on the app and add an optional comment
 - See a count of each emotion recorded
