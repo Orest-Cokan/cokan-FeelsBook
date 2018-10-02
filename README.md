@@ -19,8 +19,8 @@ Inputting NULL within comments may break the app at times
 Both are located within the docs directory
 
 # References
-1. Abram Hindle, CMPUT 301 Virtual Lecture: Student Picker for Android: 5 Controllers and adding students, https://www.youtube.com/watch?v=uLnoI7mbuEo, 2014-09-11, retrieved 2018/09/10
-1. Abram Hindle, CMPUT 301 Virtual Lecture: Student Picker for Android: 4 Navigation between Activities, https://www.youtube.com/watch?v=fxjIA4HIruU, 2014-09-11, retrieved 2018/09/10
+1. Abram Hindle, CMPUT 301 Virtual Lecture: Student Picker for Android: 5 Controllers and adding students, https://www.youtube.com/watch?v=uLnoI7mbuEo, 2014/09/11, retrieved 2018/09/10
+1. Abram Hindle, CMPUT 301 Virtual Lecture: Student Picker for Android: 4 Navigation between Activities, https://www.youtube.com/watch?v=fxjIA4HIruU, 2014/09/11, retrieved 2018/09/10
 2. In class labs (Lonely Twitter) were used to save and load data from a file, retrieved 2018/09/10 - 2018/10/02
 3. Android Developer, Fragments, https://developer.android.com/guide/components/fragments, retrieved 2018/06/01 - 2018/10/02
 4. Android Developer, RecyclerView, https://developer.android.com/guide/topics/ui/layout/recyclerview, retrieved 2018/06/01 - 2018/10/02
