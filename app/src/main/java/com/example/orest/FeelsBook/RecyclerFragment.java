@@ -54,7 +54,7 @@ public class RecyclerFragment extends Fragment {
         counterList.addItemDecoration(decoration);
                counterList.setItemAnimator(new DefaultItemAnimator());
 
-        // set UI values
+        // set UI values (counts for each emotion)
         int[] counts = new int[6];
         for(int i = 0; i < emotions.size(); i++) {
             switch (emotions.get(i).getEmotion()){
@@ -77,6 +77,8 @@ public class RecyclerFragment extends Fragment {
                     counts[5]++;
             }
         }
+
+        // set the text for each emotion and its count
         countAngry.setText(counts[0]+"");
         countFear.setText(counts[1]+"");
         countSad.setText(counts[2]+"");

@@ -20,13 +20,14 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
     private ArrayList<Emotion> emotionArrayList;
     private FragmentActivity activity;
 
+    // constructor
     public EmotionAdapter(FragmentActivity activity, ArrayList<Emotion> emotionArrayList) {
         this.activity = activity;
         this.emotionArrayList = emotionArrayList;
     }
 
 
-
+    // display the view
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         LayoutInflater inflater = (LayoutInflater) activity
@@ -46,7 +47,7 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
         holder.date.setText(emotionArrayList.get(position).getDate());
     }
 
-
+    // return the size of the list
     @Override
     public int getItemCount() {
         Log.d("Test", emotionArrayList.size()+"random");

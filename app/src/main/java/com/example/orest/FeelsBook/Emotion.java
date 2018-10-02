@@ -6,19 +6,19 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Emotion implements Serializable{
-
+    // attributes of an emotion
     private String emotion;
     private String comments;
     private String date;
 
-
+    // construct an emotion
     public Emotion(String emotion, String comments, Date date){
         this.emotion = emotion;
         this.comments = comments;
         this.date = getFormattedDate(date);
     }
 
-
+    // various getts and setters for emotion
     public String getEmotion() {
         return emotion;
     }
