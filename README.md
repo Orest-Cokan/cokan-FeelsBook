@@ -10,6 +10,9 @@ The assignment involves creating an android application in java used for recordi
 - View and edit the details past emotions
 - Delete a past emotion
 
+### Known Issues
+- Inputting NULL within comments may break the app at times
+
 ### Video and UML
 Both are located within the docs directory
 
