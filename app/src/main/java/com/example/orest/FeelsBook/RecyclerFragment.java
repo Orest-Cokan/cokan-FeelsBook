@@ -1,3 +1,12 @@
+/**
+ * @authors Skryt
+ *
+ * RecyclerFragment is a fragment that will simply update information in the history, such as
+ * the counts and place a small line separating each emotion
+ *
+ * returns: rootView
+ */
+
 package com.example.orest.FeelsBook;
 
 import android.os.Bundle;
@@ -17,12 +26,15 @@ import java.util.ArrayList;
 
 
 public class RecyclerFragment extends Fragment {
+    // attributes
     private EmotionAdapter adapter;
+
+    // make a new instance of RecyclerFragment
     public static RecyclerFragment newInstance() {
         return new RecyclerFragment();
     }
 
-
+    // display the view
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -1,3 +1,11 @@
+/**
+ * @authors Skryt
+ *
+ * EditFragment allows for users to edit an emotion in history.
+ *
+ * returns: rootView
+ */
+
 package com.example.orest.FeelsBook;
 
 import android.os.Bundle;

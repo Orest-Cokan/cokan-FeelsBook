@@ -1,12 +1,18 @@
+/**
+ * @authors Skryt
+ *
+ * MainActivity is the main driver of the application, it manages the loading/saving of emotions
+ * from disk, and adding/editing an emotion in the array
+ *
+ * returns: nothing
+ */
+
 package com.example.orest.FeelsBook;
 
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-
-import com.example.orest.FeelsBook.R;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
@@ -25,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
         // get counters from disk
         loadEmotions();
 
+        // begin fragment transition
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction =  manager.beginTransaction();
         AddFragment fragment = AddFragment.newInstance();
@@ -33,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    // add emotion to stack
+    // add emotion to array
     public void onAdd(Emotion emotion){
         if(emotion != null) {
             emotionArray.add(0,emotion);
@@ -41,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         saveEmotions();
     }
 
-
-
+    // edit the emotion in the array
     public void onEdit(Emotion emotion, int index){
         emotionArray.remove(index);
         if(emotion!= null){
@@ -52,6 +58,7 @@ public class MainActivity extends AppCompatActivity {
         onBackPressed();
     }
 
+    // load emotions from disk
     private void loadEmotions(){
         try {
             FileInputStream stream = openFileInput(COUNTER_FILE_NAME);
@@ -65,6 +72,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    // save emotions to disk
     private void saveEmotions() {
         try {
             FileOutputStream stream = openFileOutput(COUNTER_FILE_NAME,0);

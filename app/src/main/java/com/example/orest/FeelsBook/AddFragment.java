@@ -1,3 +1,15 @@
+/**
+ * @authors Skryt
+ *
+ * AddFragment will allow users to pick and choose what emotion and or comment they would
+ * like to add.
+ *
+ * returns: rootView
+ *
+ * Contains 2 helper methods, checkTrigger and delayFilter, which will check if the user input is
+ * valid and place a little nifty filter on the emoticon, respectively.
+ */
+
 package com.example.orest.FeelsBook;
 
 import android.graphics.Color;
@@ -29,7 +41,7 @@ public class AddFragment extends Fragment {
         return new AddFragment();
     }
 
-
+    // display the view
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -117,6 +129,7 @@ public class AddFragment extends Fragment {
             }
         });
 
+        // set onclick listener for the statistics button
         statistics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

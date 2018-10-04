@@ -1,3 +1,12 @@
+/**
+ * @authors Skryt
+ *
+ * Emotion is a class that holds data for what an emotion should have, the emotion, comments and
+ * date. It has a constructor to make each emotion object, as well as getters/setters.
+ *
+ * returns: nothing
+ */
+
 package com.example.orest.FeelsBook;
 
 import java.io.Serializable;
@@ -18,7 +27,7 @@ public class Emotion implements Serializable{
         this.date = getFormattedDate(date);
     }
 
-    // various getts and setters for emotion
+    // various getters and setters for an emotion
     public String getEmotion() {
         return emotion;
     }
