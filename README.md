@@ -10,9 +10,8 @@ The assignment involves creating an android application in java used for recordi
 
 ### Youtube
 
-[![cokan - FeelsBook](https://img.youtube.com/vi/PG_elPg8lpA/0.jpg
-)](https://www.youtube.com/watch?v=PG_elPg8lpA&feature=youtu.be
-"cokan - FeelsBook")
+[![https://img.youtube.com/vi/PG_elPg8lpA/0.jpg](http://img.youtube.com/vi/PG_elPg8lpA/0.jpg)](http://www.youtube.com/watch?v=PG_elPg8lpA "cokan - FeelsBook")
+
 
 The application includes the following:
 
