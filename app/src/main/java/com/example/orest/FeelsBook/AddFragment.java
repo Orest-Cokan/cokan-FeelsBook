@@ -1,3 +1,32 @@
+/**
+ * @authors Skryt
+ *
+ * AddFragment will allow users to pick and choose what emotion and or comment they would
+ * like to add.
+ *
+ * returns: rootView
+ *
+ * Contains 2 helper methods, checkTrigger and delayFilter, which will check if the user input is
+ * valid and place a little nifty filter on the emoticon, respectively.
+ */
+/**
+ *   Displays the number of unique feeling types stored in the application
+ *
+ *     Copyright (C) 2018 Orest Cokan
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.example.orest.FeelsBook;
 
 import android.graphics.Color;
@@ -29,7 +58,7 @@ public class AddFragment extends Fragment {
         return new AddFragment();
     }
 
-
+    // display the view
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -117,6 +146,7 @@ public class AddFragment extends Fragment {
             }
         });
 
+        // set onclick listener for the statistics button
         statistics.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

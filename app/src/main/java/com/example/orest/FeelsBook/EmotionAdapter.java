@@ -1,3 +1,49 @@
+/**
+ *   Displays the number of unique feeling types stored in the application
+ *
+ *     Copyright (C) 2018 Tem Tamre
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+
+/**
+ * @authors Skryt
+ *
+ * EmotionAdapter is an adapter class that simply takes data and places it into specified locations
+ * in the view. It also has a method, getItemCount, which will simply return the size of the
+ * emotionArray
+ *
+ * returns: nothing
+ */
+/**
+ *   Displays the number of unique feeling types stored in the application
+ *
+ *     Copyright (C) 2018 Orest Cokan
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.example.orest.FeelsBook;
 
 import android.content.Context;
@@ -37,7 +83,7 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
     }
 
 
-
+    // set the data into each viewHolder (ie. place what each emotion has into the view)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
         String emotion = emotionArrayList.get(position).getEmotion();
@@ -55,7 +101,7 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
     }
 
 
-
+    // place each emotion into its corresponding view
     public static class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
         private EmotionAdapter adapter;
         public ImageView emotion;
@@ -72,6 +118,7 @@ public class EmotionAdapter extends RecyclerView.Adapter<EmotionAdapter.ViewHold
 
         }
 
+        // set onClick listener for each emotion, so they can be edited
         @Override
         public void onClick(View v) {
             int position = getAdapterPosition();

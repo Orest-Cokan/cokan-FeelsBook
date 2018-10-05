@@ -1,3 +1,29 @@
+/**
+ * @authors Skryt
+ *
+ * RecyclerFragment is a fragment that will simply update information in the history, such as
+ * the counts and place a small line separating each emotion
+ *
+ * returns: rootView
+ */
+/**
+ *   Displays the number of unique feeling types stored in the application
+ *
+ *     Copyright (C) 2018 Orest Cokan
+ *
+ *     This program is free software: you can redistribute it and/or modify
+ *     it under the terms of the GNU General Public License as published by
+ *     the Free Software Foundation, either version 3 of the License, or
+ *     (at your option) any later version.
+ *
+ *     This program is distributed in the hope that it will be useful,
+ *     but WITHOUT ANY WARRANTY; without even the implied warranty of
+ *     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ *     GNU General Public License for more details.
+ *
+ *     You should have received a copy of the GNU General Public License
+ *     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
 package com.example.orest.FeelsBook;
 
 import android.os.Bundle;
@@ -17,12 +43,15 @@ import java.util.ArrayList;
 
 
 public class RecyclerFragment extends Fragment {
+    // attributes
     private EmotionAdapter adapter;
+
+    // make a new instance of RecyclerFragment
     public static RecyclerFragment newInstance() {
         return new RecyclerFragment();
     }
 
-
+    // display the view
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
