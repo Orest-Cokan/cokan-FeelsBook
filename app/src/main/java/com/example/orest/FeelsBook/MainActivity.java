@@ -35,6 +35,8 @@ import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 
 public class MainActivity extends AppCompatActivity {
     public ArrayList<Emotion> emotionArray;
@@ -61,6 +63,8 @@ public class MainActivity extends AppCompatActivity {
     public void onAdd(Emotion emotion){
         if(emotion != null) {
             emotionArray.add(0,emotion);
+            sortEmotions(emotionArray);
+
         }
         saveEmotions();
     }
@@ -70,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
         emotionArray.remove(index);
         if(emotion!= null){
             emotionArray.add(0, emotion);
+            sortEmotions(emotionArray);
         }
         saveEmotions();
         onBackPressed();
@@ -101,5 +106,21 @@ public class MainActivity extends AppCompatActivity {
         catch(java.io.IOException e) {
             //do nothing
         }
+    }
+
+    // sort emotions
+    private void sortEmotions(ArrayList<Emotion> emotionArray){
+        Collections.sort(emotionArray, new Comparator<Emotion>() {
+            @Override
+            public int compare(Emotion o1, Emotion o2) {
+                if(o1.getDate().compareTo(o2.getDate()) <= 0){
+                    return -1;
+                }
+                else{
+                    return 0;
+                }
+            }
+        });
+
     }
 }

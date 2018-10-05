@@ -63,7 +63,7 @@ public class Emotion implements Serializable{
 
 
     private String getFormattedDate (Date date) {
-        SimpleDateFormat format = new SimpleDateFormat("YYYY-MM-DD'T'H:mm:ss", Locale.CANADA);
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.CANADA);
         return format.format(date);
     }
 
