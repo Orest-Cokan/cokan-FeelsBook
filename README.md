@@ -8,11 +8,6 @@ The assignment involves creating an android application in java used for recordi
 ![](https://imgur.com/MxIr7Vd.png) ![](https://imgur.com/zTYY4Eg.png) 
 ![](https://imgur.com/gkFJnFI.png) ![](https://imgur.com/g6hQpjn.png)
 
-### Youtube
-
-[![https://img.youtube.com/vi/PG_elPg8lpA/0.jpg](http://img.youtube.com/vi/PG_elPg8lpA/0.jpg)](http://www.youtube.com/watch?v=PG_elPg8lpA "cokan - FeelsBook")
-
-
 The application includes the following:
 
 - Quickly record an emotion with only 1 click on the app and add an optional comment
